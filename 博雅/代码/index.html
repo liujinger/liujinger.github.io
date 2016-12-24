@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博雅互动</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        body {
+            font-size: 14px;
+            font-family: "Microsoft YaHei", sans-serif;
+
+        }
+        a {
+            text-decoration: none;
+        }
+        .w {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .cl {
+            clear: both;
+        }
+        .fl {
+            float: left;
+        }
+        .fr {
+            float: right;
+        }
+        .header {
+            height: 58px;
+            background-color: #191D3A;
+        }
+        .header .logo {
+            margin-right: 40px;
+        }
+        .nav li {
+            float: left;
+        }
+        .nav li a {
+            display: block;
+            width: 100px;
+            height: 58px;
+            text-align: center;
+            font: 400 12px/58px "Microsoft YaHei";
+            color: #818496;
+            border-right: 1px solid darkgray;
+        }
+        .nav li a:hover {
+            color: white;
+        }
+        .nav li a.current {
+            color: white;
+            background-color: #252947;
+        }
+        .jrwm {
+            padding-top: 12px;
+
+        }
+        .logo-nav-jrwm {
+            padding-right: 20px;
+        }
+        /*导航栏结束*/
+        /*通栏开始*/
+        .banner {
+            /*height:465px;*/
+            margin-bottom: 50px;
+            background-color: #FCBA1E;
+        }
+        .banner a{
+            display: block;
+            width: 100%;
+            height: 465px;
+            background: url("../images/banner.jpg") no-repeat top center;
+        }
+        /*索引开始*/
+        .gamebox-again {
+            padding-bottom: 43px;
+            border-bottom: 1px solid #DBE1E7;
+            margin-bottom: 53px;
+            position: relative;
+        }
+        .gamebox-again .index {
+            width: 80px;
+            height: 14px;
+            position: absolute;
+            left: 50%;
+            margin-left: -40px;
+            bottom: -7px;
+            clear: both;
+            background-color: white;
+
+        }
+        .index li {
+            float: left;
+        }
+        .index li a {
+            display: block;
+            width: 14px;
+            height: 14px;
+            margin: 0 3px;
+            border-radius: 50%;
+            line-height: 14px;
+            text-align: center;
+            font-size: 10px;
+            background-color: black;
+            color: white;
+        }
+        .index li a.current {
+            background-color: green;
+        }
+        /*下面的索引值结束*/
+
+        .game-item {
+
+            margin-right: 42px;
+        }
+        .game-item span {
+            display: block;
+            margin-bottom: 9px;
+        }
+        .game-item span img{
+            width: 218px;
+            height: 130px;
+        }
+        .game-item .title {
+            text-align: center;
+            font: 700 12px/24px "Microsoft YaHei";
+            height: 24px;
+        }
+        .game-item .play {
+            text-align: center;
+
+            height: 23px;
+        }
+        .game-item .play a {
+            color: #38B774;
+            font: 400 11px/23px  "Times New Roman", "Microsoft YaHei";
+        }
+
+        .marginRight0 {
+            margin-right: 0;
+        }
+
+        /* 新闻和招聘开始*/
+        .news-invite {
+            padding-bottom: 54px;
+            background: url("../images/indexmainbg.jpg") no-repeat bottom center;
+        }
+        .news-invite .left {
+            width: 500px;
+            height: 310px;
+            background: url("../images/bynewsbg.jpg") no-repeat 0 0;
+        }
+        .news-invite .right {
+            width: 500px;
+            height: 310px;
+            background: url("../images/byhrbg3.jpg") no-repeat 0 0;
+
+        }
+
+        .boya-news {
+            padding: 119px 20px 0;
+        }
+        .boya-news li {
+            height: 47px;
+            border-bottom: 1px solid lightgray;
+            line-height: 47px;
+            font-size: 11px;
+        }
+        .boya-news li .date {
+            color: #B6BED8;
+            font-size: 10px;
+            margin-right: 22px;
+        }
+
+
+        .invite-title {
+            width: 114px;
+            padding: 39px 0 0 78px;
+            color: white;
+            margin-bottom: 23px;
+        }
+        .invite-title h1 {
+            font: 700 27px/39px "Microsoft YaHei";
+
+        }
+        .invite-title p {
+            line-height: 11px;
+            font-size: 11px;
+        }
+        /*310-90+1=221*/
+
+
+
+
+        /*版权声明模块*/
+        .footer {
+            height: 91px;
+            background-color: #191D3A;
+        }
+
+        .footer .footer-shuoming {
+            color: #6C6E7E;
+            font: 400 9px/91px "Microsoft YaHei";
+        }
+
+        .gsj {
+            padding-top: 20px;
+            margin-left: 8px;
+        }
+        .invite-detail {
+            padding: 0 175px 0 20px;
+        }
+        .invite-detail h3{
+            font:700 14px/20px "Microsoft YaHei";
+            color: white;
+        }
+        .invite-detail .zhiwei {
+            font: 400 13px/37px "Microsoft YaHei";
+            height: 37px;
+            color: white;
+            border-bottom: 1px solid #6FDEA3;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+<!--顶部导航栏-->
+<div class="header">
+    <div class="w">
+       <div class="logo-nav-jrwm">
+           <!--logo-->
+           <div class="logo fl"><a href="#"><img src="../images/logo.png" alt="logo"></a></div>
+           <!--navigation  导航栏-->
+           <div class="nav fl">
+               <ul>
+                   <li><a href="#" class="current">首页</a></li>
+                   <li><a href="#">博雅新闻</a></li>
+                   <li><a href="#">博雅游戏</a></li>
+                   <li><a href="#">关于我们</a></li>
+                   <li><a href="#">客服中心</a></li>
+                   <li><a href="#">投资者关系</a></li>
+               </ul>
+           </div>
+           <!--加入我们-->
+           <div class="jrwm fr"><a href="#"><img src="../images/jrwm.png" alt="jrwm"></a></div>
+       </div>
+    </div>
+</div>
+<!--导航栏结束-->
+
+<!--通栏-->
+<div class="banner"><a href="#"></a></div>
+
+<!--下面的视频播放  四个图片-->
+<div class="gamebox ">
+    <div class="w gamebox-again">
+        <ul>
+            <li class="game-item fl">
+                <span><img src="../images/pro1.jpg" alt=""></span>
+                <p class="title">BPT宣传片</p>
+                <p class="play"><a href="#">点击播放</a></p>
+            </li>
+            <li class="game-item fl">
+                <span><img src="../images/pro2.jpg" alt=""></span>
+                <p class="title">博雅互动宣传视频</p>
+                <p class="play"><a href="#">点击播放</a></p>
+            </li>
+            <li class="game-item fl">
+                <span><img src="../images/pro3.jpg" alt=""></span>
+                <p class="title">斗地主</p>
+                <p class="play"><a href="#">LANDLORDS</a></p>
+            </li>
+            <li class="game-item marginRight0 fl">
+                <span><img src="../images/pro4.jpg" alt=""></span>
+                <p class="title">德州扑克</p>
+                <p class="play"><a href="#">TEXAS HOLD'EM POKer</a></p>
+            </li>
+        </ul>
+        <!--下面这一块是四个视频下面表示索引的小圆点-->
+        <div class="index">
+            <ul>
+                <li><a href="#" class="current">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+
+        </div>
+        <div class="cl"></div>
+
+    </div>
+
+</div>
+
+<!--博雅新闻和招聘-->
+<div class="news-invite">
+   <div class="w">
+       <div class="left fl">
+           <div class="boya-news">
+               <ul>
+                   <li><span class="date">09/28</span><span>2015博雅扑克大赛BPT在澳门落幕</span></li>
+                   <li><span class="date">09/28</span><span>2015博雅扑克大赛BPT在澳门落幕</span></li>
+                   <li><span class="date">09/28</span><span>2015博雅扑克大赛BPT在澳门落幕</span></li>
+                   <li><span class="date">09/28</span><span>2015博雅扑克大赛BPT在澳门落幕</span></li>
+               </ul>
+           </div>
+       </div>
+       <div class="right fl">
+           <div class="invite-title">
+               <h1>博雅招聘</h1>
+               <p>BOYAA JOBS</p>
+           </div>
+           <div class="invite-detail">
+               <h3>专场招聘岗位</h3>
+               <ul>
+                   <li class="zhiwei">PHP开发工程师</li>
+                   <li class="zhiwei">PHP开发工程师</li>
+                   <li class="zhiwei">PHP开发工程师</li>
+                   <li class="zhiwei">PHP开发工程师</li>
+               </ul>
+           </div>
+       </div>
+   </div>
+    <div class="cl"></div>
+</div>
+
+<!---->
+
+
+<!--版权声明模块开始-->
+<div class="footer">
+    <div class="w">
+        <span class="footer-shuoming map fl"><a href="#" style="color: #6C6E7E">网站地图</a> | 免责声明</span>
+        <span class="gsj fr"><img class="fr" src="../images/govIcon.gif" alt="" width="40" height="50"></span>
+        <span class="footer-shuoming copyright fr">CopyRight&copy;2001-2014博雅互动(Boy啊dkjfbsjdnf)增值业务经营许可证:2345678978</span>
+
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

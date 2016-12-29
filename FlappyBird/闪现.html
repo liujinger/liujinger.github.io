@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            margin: 100px;
+            position: relative;
+        }
+        @keyframes shanxian {
+            from {
+                left: 0;
+                opacity: 0;
+            }
+            to {
+                left: 200px;
+                opacity: 1;
+            }
+        }
+        #div1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .shanxian{
+            animation: shanxian 0.5s;
+            /*animation: fadeInto 0.5s;*/
+        }
+        @keyframes fadeout {
+            from {opacity: 1;}
+            to {opacity: 0;}
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: fadeout 0.5s;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div id="div1"></div>
+    <div id="div2"></div>
+</div>
+<button>闪现</button>
+<script>
+    var button = document.querySelector("button");
+    var div1 = document.querySelector("#div1");
+    var div2 = document.querySelector("#div2");
+    button.onclick = function () {
+        div1.classList.add("shanxian");
+        div2.classList.add("fadeout");
+    }
+</script>
+</body>
+</html>

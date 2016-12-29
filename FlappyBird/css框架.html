@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            /*width: 100px;*/
+            /*height: 200px;*/
+            background-color: red;
+        }
+        @keyframes show {
+            from {height: 0;}
+            to {height: 200px;}
+        }
+        @keyframes hide {
+            from {height: 200px;}
+            to {height: 0;}
+        }
+        .show{
+           animation: show 2s;
+            animation-fill-mode: forwards;
+        }
+        .hide{
+            animation: hide 2s;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<button>显示</button>
+<button>隐藏</button>
+<script>
+    var button1 = document.querySelectorAll("button")[0];
+    var button2 = document.querySelectorAll("button")[1];
+    var span = document.querySelector("div");
+    button1.onclick = function (){
+
+        span.classList.remove("hide");
+        span.classList = "show";
+
+    }
+    button2.onclick = function (){
+        console.log("测试");
+        span.classList.remove("show");
+        span.classList = "hide";
+    }
+</script>
+</body>
+</html>

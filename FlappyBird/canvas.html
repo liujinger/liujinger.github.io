@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas id="canvas" width="600" height="500" style="border:1px solid #c3c3c3;"></canvas>
+<script>
+    var canavs = document.querySelector("canvas");
+    var contex = canavs.getContext("2d");
+    contex.strokeStyle = 'blue';
+    contex.arc(100,100,50,0,Math.PI*2,false)
+</script>
+</body>
+</html>
